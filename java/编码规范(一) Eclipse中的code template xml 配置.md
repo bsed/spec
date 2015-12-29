@@ -19,10 +19,12 @@ Comments-->Files（Java文件注释）
 
 ```xml
 /**
- * Project Name:${project_name}
- * File Name:${file_name}
- * Package Name:${package_name}
- * Date:${date}${time}
+ * @Project Name: ${project_name}
+ * @File Name: ${file_name}
+ * @Package: ${package_name}
+ * @Description: ${todo}(用一句话描述该文件做什么)
+ * @date: ${date}${time}
+ * @author: wasabeef@gnux.cn
  * Copyright (c) ${year}, wasabeef@gnux.cn All Rights Reserved.
  *
  */
@@ -32,14 +34,14 @@ Comments-->Types（Java类注释）
 
 ```xml
 /**
- * ClassName: ${type_name} <br/>
- * Function: ${todo} ADD FUNCTION. <br/>
- * Reason: ${todo} ADD REASON(可选). <br/>
- * date: ${date} ${time} <br/>
- *
- * @author ${user}
- * @version ${enclosing_type}${tags}
- * @since JDK 1.6
+ * @ClassName: ${type_name} <br/>
+ * @Description: ${todo}(这里用一句话描述这个类的作用) <br/>
+ * @Function: ${todo} ADD FUNCTION. <br/>
+ * @Reason: ${todo} ADD REASON(可选). <br/>
+ * @date: ${date} ${time} <br/>
+ * @author: ${user}
+ * @version: ${enclosing_type}${tags}
+ * @since: JDK 1.6
  */
 ```
 
@@ -47,8 +49,8 @@ Comments-->Fields（类字段注释）
 
 ```xml
 /**
- * ${field}:${todo}(用一句话描述这个变量表示什么).
- * @since JDK 1.6
+ * @Fields: ${field}:${todo}(用一句话描述这个变量表示什么).
+ * @since: JDK 1.6
  */
 ```
 
@@ -57,7 +59,8 @@ Comments-->Constructors（构造函数注释）
 ```xml
 /**
  * Creates a new instance of ${enclosing_type}.
- *
+ * <p>Title:</p>
+ * <p>Description:</p>
  * ${tags}
  */
 ```
@@ -66,13 +69,15 @@ Comments-->Methods（Java方法注释）
 
 ```xml
 /**
- * ${enclosing_method}:(这里用一句话描述这个方法的作用). <br/>
- * ${todo}(这里描述这个方法适用条件 – 可选).<br/>
- * ${todo}(这里描述这个方法的执行流程 – 可选).<br/>
- * ${todo}(这里描述这个方法的使用方法 – 可选).<br/>
- * ${todo}(这里描述这个方法的注意事项 – 可选).<br/>
- *
- * @author ${user}
+ * @Title: ${enclosing_method}:(这里用一句话描述这个方法的作用). <br/>
+ * @Description: ${todo}(这里描述这个方法适用条件 – 可选).<br/>
+ * @Description: ${todo}(这里描述这个方法的执行流程 – 可选).<br/>
+ * @Description: ${todo}(这里描述这个方法的使用方法 – 可选).<br/>
+ * @Description: ${todo}(这里描述这个方法的注意事项 – 可选).<br/>
+ * @param: ${tags}    设定文件 
+ * @return: ${return_type}    返回类型
+ * @throws: 
+ * @author: ${user}
  * ${tags}
  * @since JDK 1.6
  */
@@ -82,8 +87,11 @@ Comments-->Overriding methods（重写方法注释）
 
 ```xml
 /**
- * ${todo} 简单描述该方法的实现功能（可选）.
- * ${see_to_overridden}
+ * (非 Javadoc)
+ * <p>Title: ${enclosing_method}</p> 
+ * <p>Description: ${todo} 简单描述该方法的实现功能（可选）.</p>
+ * ${tags} 
+ * ${see_to_overridden} 
  */
 ```
 
@@ -102,6 +110,16 @@ Comments-->Getters（Java Getter方法注释）
  * ${bare_field_name}.
  *
  * @return  the ${bare_field_name}
+ * @since   JDK 1.6
+ */
+```
+
+Comments-->Setters（Java Setters方法注释）
+```xml
+/**
+ * ${param}.
+ *
+ * @param   ${param}    the ${bare_field_name} to set
  * @since   JDK 1.6
  */
 ```
